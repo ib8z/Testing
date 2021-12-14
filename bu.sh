@@ -1,44 +1,63 @@
 #!/bin/bash
 
 #Welcome 
-echo""
+echo ""
 echo "start copy directory ..."
-echo""
-
-
-#Delete old directory
-rm -rf /home/gk/Downloads/My_Files # select your path
-rm -rf /media/gk/Backup/My_Files/  # select your path
+echo ""
+echo "-------------------------------------"
+echo ""
 
 
 #start Copy directorys↓
 
 
 # copy source directory for backup directory
-cp -r /home/gk/Documents/My_Files/ /home/gk/Downloads/ # select your path
-
-echo ""
+echo "Documents ---> Downloads"
+rm -rf /home/gk/Downloads/My_Files                      # Delete
+cp -r /home/gk/Documents/My_Files/ /home/gk/Downloads/  # copy
 echo "Documents ---> Downloads = Done"
-echo ""
 sleep 1
+
 
 # copy source directory for Backup_Hard directory
-cp -r /home/gk/Documents/My_Files/ /media/gk/Backup/
-
-echo "Documents ---> Backup_Hard = Done"
-echo ""
+echo "" 
+echo "Documents ---> Backup_Hard"
+rm -rf /media/gk/Backup/My_Files/                       # Delete
+cp -r /home/gk/Documents/My_Files/ /media/gk/Backup/    # copy
+echo "Documents ---> Backup_Hard = Done" 
 sleep 1
 
-echo "-------------------------------------"
+
+# copy source directory for Backup_Hard directory
+echo "" 
+echo "Documents ---> Home"
+rm -rf /home/gk/My_Files                                # Delete
+cp -r /home/gk/Documents/My_Files/ /home/gk/My_Files    # copy
+echo "Documents ---> Home = Done" 
+sleep 1
+
+
+
+#--------------------------------------------------------------
+
+
 
 #print Size of Files
 echo ""
+echo "-------------------------------------"
+echo ""
+
+
 echo "Source"
 du -sb /home/gk/Documents/My_Files/
 echo ""
 
 echo "Downloads" 
 du -sb /home/gk/Downloads/My_Files/
+echo ""
+
+echo "Home"
+du -sb /home/gk/My_Files
 echo ""
 
 echo "Backup_Hard"
@@ -51,3 +70,4 @@ echo ""
 echo "-------------------------------------"
 echo ""
 echo "We are Done boss !!!"
+echo ""
