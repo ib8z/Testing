@@ -1,0 +1,86 @@
+#!/bin/bash
+
+#Welcome 
+echo ""
+echo "start copy directory ..."
+echo ""
+echo "-------------------------------------"
+echo ""
+
+
+
+#start Backup↓
+
+
+
+#3.1 USB    (Delete old file and code from source)
+echo "Documents ---> 3.1"
+rm -rf /media/                               # Delete
+cp -r /home/ /media/                         # copy
+echo "Documents ---> 3.1 = Done"
+sleep 1
+
+
+
+#HHD Hard   (Delete old file and code from source)
+echo "" 
+echo "Documents ---> HHD"
+rm -rf /media/                                # Delete
+cp -r /home/ /media/                          # copy
+echo "Documents ---> HHD = Done"
+sleep 1
+
+
+
+#3.0 USB    (Delete old file and code from source)
+echo "" 
+echo "Documents ---> 3.0"
+rm -rf /media/                                # Delete
+cp -r /home/ /media/                          # copy
+echo "Documents ---> 3.0 = Done"
+sleep 1
+
+
+
+#2.0 USB    (Delete old file and code from source)
+echo "" 
+echo "Documents ---> 2.0"
+rm -rf /media/                                  # Delete
+cp -r /home/ /media/                            # copy
+echo "Documents ---> 2.0 = Done"
+sleep 1
+
+
+
+#--------------------------------------------------------------
+
+
+
+#print size
+echo ""
+echo "-------------------------------------"
+echo ""
+
+
+echo "3.1 USB"
+du -sb /media/3.1
+echo ""
+
+echo "HHD" 
+du -sb /media/HHD
+echo ""
+
+echo "3.0 USB"
+du -sb /media/3.0
+echo ""
+
+echo "2.0 USB"
+du -sb /media/2.0
+echo ""
+
+
+#Done
+echo "-------------------------------------"
+echo ""
+echo "We are Done boss !!!"
+echo ""
